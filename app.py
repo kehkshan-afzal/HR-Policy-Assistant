@@ -385,17 +385,37 @@ if uploaded_file is not None:
     # QUESTION SECTION
     # -----------------------------------------------------
 
-    st.subheader("2. Ask a Question")
+   # -----------------------------------------------------
+# QUESTION SECTION
+# -----------------------------------------------------
 
-    question = st.text_input(
-        "Enter your HR policy question",
-        placeholder="Example: How many annual leave days are allowed?"
-    )
+st.subheader("2. Ask a Question")
 
-    ask_button = st.button(
-        "🔎 Ask HR Policy",
-        type="primary"
-    )
+st.markdown("**💡 Example Questions**")
+
+example_questions = [
+    "How many annual leave days are employees allowed?",
+    "How many sick leave days are available?",
+    "What are the normal working hours?",
+    "How many days can employees work remotely?",
+    "How long is the probation period?",
+    "What is the maternity leave policy?",
+]
+
+for example in example_questions:
+    st.markdown(f"- {example}")
+
+st.write("")
+
+question = st.text_input(
+    "Enter your HR policy question",
+    placeholder="Type your question here..."
+)
+
+ask_button = st.button(
+    "🔎 Ask HR Policy",
+    type="primary"
+)
 
 
     # -----------------------------------------------------
